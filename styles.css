@@ -1,0 +1,155 @@
+:root {
+    font-family: "roboto", sans-serif;
+    font-size: 16px;
+    --text-primary: #1f1f1f;
+    --text-secondary: #f8f5f5;
+    --bg-primary: #c5bebe;
+    --bg-secondary: #1f1f1f;
+    --transition-speed: 800ms;
+
+}
+
+body {
+    height: 100vw;
+    color: black;
+    background-color: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+    
+}
+
+body::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(6, 105, 105);
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-secondary);
+    transition: all 200ms ease;
+    
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+    
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    min-width: 3rem;
+    max-width: 4rem;
+    margin-left: 0.2rem;
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+    
+}
+
+.navbar:hover {
+    width: 9rem;
+ 
+}
+
+.navbar:hover .link-text {
+    display: block;
+ 
+}
+
+.navbar:hover svg {
+    transform: rotate(180deg);
+    transition: var(--transition-speed);
+ 
+}
+
+.container {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button:hover {
+    scale: 1.2;
+}
+
+.grid {
+    border: 2px solid green;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.rows {
+    border: 0.5px solid black;
+    display: flex;
+    flex: 1;
+}
+
+.column {
+    border: 0.5px solid black;
+    display: flex;
+    flex: 1;
+}
+
+
+.rows, .columns {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+#colouring {
+    background-color: blue;
+}
